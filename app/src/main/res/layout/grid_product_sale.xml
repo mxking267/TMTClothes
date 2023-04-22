@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+
+        android:layout_width="180dp"
+        android:layout_height="300dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/border"
+        android:elevation="3dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ao_thun_1"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/ao_thun"/>
+
+        <TextView
+            android:id="@+id/tv_sale"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:background="@drawable/rectangle"
+            android:text="@string/txt_sale"
+            android:textAlignment="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="140dp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/gvs_ten_ao_thun_1"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ao_thun_1"
+            android:layout_centerHorizontal="true"
+            android:text="@string/ao_thun_1"
+            android:textAlignment="center"
+            android:textAppearance="@style/ao_thun"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/gvs_gia_sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gvs_ten_ao_thun_1"
+            android:layout_marginLeft="20dp"
+            android:text="@string/gia_ao_thun_sale"
+            android:textAppearance="@style/gia_sale"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/gvs_gia_goc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gvs_gia_sale"
+            android:layout_marginLeft="20dp"
+            android:text="@string/gia_ao_thun_goc"
+            android:textAppearance="@style/gia_goc"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/img_star"
+            android:layout_width="15dp"
+            android:layout_height="18dp"
+            android:layout_below="@id/gvs_gia_goc"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/baseline_star_24"/>
+
+        <TextView
+            android:id="@+id/tv_some_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_star"
+            android:layout_below="@id/gvs_gia_goc"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/some_id"
+            android:textAppearance="@style/some_id"/>
+
+        <TextView
+            android:id="@+id/tv_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_some_id"
+            android:layout_below="@id/gvs_gia_goc"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:text="@string/reviews"
+            android:textAppearance="@style/some_id"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

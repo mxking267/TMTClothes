@@ -2,4 +2,20 @@
     <string name="app_name">TMT Shop</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="txt_sale">SALE</string>
+    <string name="ao_thun_1">Áo thun trắng</string>
+
+    <string name="gia_ao_thun_sale">500,000 VND</string>
+    <string name="gia_ao_thun_ban_dau">550,000 VND</string>
+    <string name="gia_ao_thun_goc"><strike>550,000 VND</strike></string>
+
+    <string name="some_id">4.6</string>
+    <string name="reviews">86 Reviews</string>
+
+    <string name="list_product_1">Áo thun trắng</string>
+
+    <string name="ten_shop">TMT Shop</string>
+    <string name="list_gia_ban">550,000 VND</string>
+
 </resources>
