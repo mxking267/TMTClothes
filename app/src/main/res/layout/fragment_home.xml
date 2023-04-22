@@ -30,4 +30,13 @@
         android:layout_height="wrap_content"
         android:text="Content"/>
 
+    <include
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/start_vote"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
