@@ -13,4 +13,45 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="style_sale_text">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="ao_thun">
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#0C1A30</item>
+    </style>
+
+    <style name="gia_sale">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textColor">#FE3A30</item>
+    </style>
+
+    <style name="gia_goc">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textColor">#C4C5C4</item>
+    </style>
+
+    <style name="some_id">
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textColor">#0C1A30</item>
+    </style>
+
+    <style name="list_ao_thun">
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#0C1A30</item>
+    </style>
+
+    <style name="list_gia_ban">
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textColor">#FE3A30</item>
+    </style>
 </resources>
