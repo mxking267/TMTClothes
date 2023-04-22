@@ -1,7 +1,8 @@
 <resources>
 
     <style name="Widget.Theme.TMTShop.MyView" parent="">
-        <item name="android:background">@color/gray_600</item>
+        <item name="android:background">@color/white</item>
         <item name="exampleColor">@color/light_blue_600</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 </resources>

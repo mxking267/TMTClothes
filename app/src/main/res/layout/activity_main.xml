@@ -5,22 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="activity.MainActivity"
+    android:fitsSystemWindows="true"
 
     >
 
     <!--Title Bar -->
-    <RelativeLayout app:layout_constraintTop_toTopOf="parent"
+    <!--<RelativeLayout
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:id="@+id/action_bar_custom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:orientation="horizontal"
         android:background="@color/white"
         android:elevation="8dp"
         android:padding="5dp"
+        android:layout_marginTop="40dp"
         >
 
         <TextView
+
             android:layout_centerHorizontal="true"
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -33,34 +37,34 @@
 
         <ImageView
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@id/action_bar_cart"
             android:id="@+id/action_bar_bell"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:layout_marginStart="94dp"
+            android:layout_toLeftOf="@id/action_bar_cart"
+            android:layout_toEndOf="@+id/textView"
             android:src="@mipmap/ic_bell_foreground" />
 
         <ImageView
             android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
             android:id="@+id/action_bar_cart"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:layout_alignParentRight="true"
             android:layout_gravity="center_vertical|end"
             android:src="@mipmap/ic_cart_foreground"
 
 
             />
-    </RelativeLayout>
 
+    </RelativeLayout>-->
 
-    <FrameLayout
-        android:id="@+id/fragment_container_view"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/main_view_pager"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp" />
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"

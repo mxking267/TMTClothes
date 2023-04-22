@@ -4,30 +4,34 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="Fragments.HomeFragment"
+    android:background="@color/white"
+    android:padding="20dp"
     >
 
     <!-- TODO: Update blank fragment layout -->
     <EditText
+        android:id="@+id/home_search_input"
         android:layout_width="325dp"
         android:layout_height="50dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="100dp"
-        android:backgroundTint="@color/white"
-        android:background="@drawable/rounded_corner"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shadow"
         android:hint="Search"
         android:drawableRight="@drawable/baseline_search_24"
         android:textColorHint="@color/gray_half"
         android:padding="10dp"
         />
-    <TextView
-        android:layout_width="match_parent"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="50dp"
+        android:id="@+id/home_recycler_view"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Slide"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Content"/>
+        app:layout_constraintTop_toBottomOf="@id/home_search_input"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:orientation="horizontal"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
