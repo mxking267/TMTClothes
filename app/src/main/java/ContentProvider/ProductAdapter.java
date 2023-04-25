@@ -10,10 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tmtshop.R;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import activity.Product;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
     private Context context;
