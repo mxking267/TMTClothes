@@ -1,15 +1,17 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="Fragments.LoginFragment">
+    tools:context="activity.AccountActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:layout_marginLeft="25dp"
-        android:text="Welcome back to \nTMT Shop"
+        android:text="Tài khoản và mật khẩu"
         android:textStyle="bold"
         android:textSize="35dp"
         android:textColor="@color/black"/>
@@ -17,28 +19,28 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="170dp"
         android:layout_marginLeft="25dp"
-        android:textSize="18sp"
-        android:text="Vui lòng nhập dữ liệu để đăng nhập"/>
+        android:textSize="17sp"
+        android:text="Hoàn thành các dữ liệu sau để sử dụng \nTMT Shop"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="240dp"
         android:layout_marginLeft="25dp"
         android:textSize="20dp"
-        android:text="Email/Phone"
+        android:text="Họ tên"
         android:textColor="@color/black"/>
 
     <EditText
         android:layout_width="330dp"
         android:layout_height="50dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="280dp"
         android:layout_marginLeft="25dp"
         android:textColorHint="@color/gray_600"
         android:background="@drawable/frame_edt"
-        android:hint="Nhập địa chỉ email/số điện thoại của bạn"/>
+        android:hint="Nhập họ tên"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -60,24 +62,14 @@
         android:hint="Nhập mật khẩu"/>
 
     <Button
-        android:layout_width="330dp"
+        android:id="@+id/account_btn_xn"
+        android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="550dp"
         android:layout_marginLeft="30dp"
-        android:text="Đăng Nhập"
+        android:text="Xác nhận"
         android:textColor="@color/white"
         android:textSize="18dp"
         android:background="@drawable/login_button"/>
 
-    <TextView
-        android:id="@+id/login_dk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_marginBottom="30dp"
-        android:layout_marginRight="30dp"
-        android:text="Đăng ký"
-        android:textSize="20dp"
-        android:textColor="#3669C9"/>
-    
-</FrameLayout>
+</RelativeLayout>

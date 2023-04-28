@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="activity.VerifiActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="25dp"
+        android:text="Xác minh tài khoản"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="25dp"
+        android:textSize="17sp"
+        android:text="Nhập mã OTP gửi đến"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="25dp"
+        android:textSize="20dp"
+        android:text="Mã xác minh"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:textSize="20dp"
+        android:text="Gửi lại mã"
+        android:textColor="#3669C9"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@drawable/border"
+            tools:ignore="LabelFor"/>
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@drawable/border"
+            tools:ignore="LabelFor"/>
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@drawable/border"
+            tools:ignore="LabelFor"/>
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@drawable/border"
+            tools:ignore="LabelFor"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/verifi_btn_tt"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="30dp"
+        android:text="Tiếp tục"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:background="@drawable/login_button"/>
+
+</RelativeLayout>

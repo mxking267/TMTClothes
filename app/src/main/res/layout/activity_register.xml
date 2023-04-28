@@ -1,15 +1,17 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="Fragments.LoginFragment">
+    tools:context="activity.RegisterActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:layout_marginLeft="25dp"
-        android:text="Welcome back to \nTMT Shop"
+        android:text="Đăng ký tài khoản"
         android:textStyle="bold"
         android:textSize="35dp"
         android:textColor="@color/black"/>
@@ -17,15 +19,15 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="170dp"
         android:layout_marginLeft="25dp"
-        android:textSize="18sp"
-        android:text="Vui lòng nhập dữ liệu để đăng nhập"/>
+        android:textSize="17sp"
+        android:text="Nhập Email/Số điện thoại để đăng ký"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="220dp"
         android:layout_marginLeft="25dp"
         android:textSize="20dp"
         android:text="Email/Phone"
@@ -34,50 +36,41 @@
     <EditText
         android:layout_width="330dp"
         android:layout_height="50dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="270dp"
         android:layout_marginLeft="25dp"
         android:textColorHint="@color/gray_600"
         android:background="@drawable/frame_edt"
         android:hint="Nhập địa chỉ email/số điện thoại của bạn"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="360dp"
-        android:layout_marginLeft="25dp"
-        android:textSize="20dp"
-        android:text="Password"
-        android:textColor="@color/black"/>
-
-    <EditText
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginLeft="25dp"
-        android:textColorHint="@color/gray_600"
-        android:background="@drawable/frame_edt"
-        android:inputType="textPassword"
-        android:hint="Nhập mật khẩu"/>
-
     <Button
-        android:layout_width="330dp"
+        android:id="@+id/register_btn_dk"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="500dp"
         android:layout_marginLeft="30dp"
-        android:text="Đăng Nhập"
+        android:text="Đăng ký"
         android:textColor="@color/white"
         android:textSize="18dp"
         android:background="@drawable/login_button"/>
 
     <TextView
-        android:id="@+id/login_dk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="70dp"
         android:layout_marginBottom="30dp"
-        android:layout_marginRight="30dp"
-        android:text="Đăng ký"
+        android:text="Đã có tài khoản?"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/register_tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="230dp"
+        android:layout_marginBottom="30dp"
+        android:text="Đăng nhập"
         android:textSize="20dp"
         android:textColor="#3669C9"/>
-    
-</FrameLayout>
+
+</RelativeLayout>
