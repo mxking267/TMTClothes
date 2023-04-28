@@ -1,33 +1,52 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="Fragments.HomeFragment"
+    android:background="@color/white"
+    android:padding="20dp"
+    android:orientation="vertical"
     >
 
     <!-- TODO: Update blank fragment layout -->
     <EditText
+        android:id="@+id/home_search_input"
         android:layout_width="325dp"
         android:layout_height="50dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="100dp"
-        android:backgroundTint="@color/white"
-        android:background="@drawable/rounded_corner"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shadow"
         android:hint="Search"
         android:drawableRight="@drawable/baseline_search_24"
         android:textColorHint="@color/gray_half"
         android:padding="10dp"
         />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Slide"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="25dp"
+            android:id="@+id/home_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:textColor="@color/gray_half"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Feature Product"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_recycler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+
+
+
+
+</LinearLayout>

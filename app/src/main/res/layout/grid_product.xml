@@ -1,78 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <RelativeLayout
-        android:layout_width="170dp"
-        android:layout_height="280dp"
-        android:background="@drawable/border"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp">
-
-    </RelativeLayout>
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border"
+    android:padding="10dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginRight="20dp"
+    >
 
     <ImageView
-        android:id="@+id/gv_img_1"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"
+        android:id="@+id/product_image"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/ao_thun"/>
 
     <TextView
-        android:id="@+id/gv_ten_sp"
+        android:id="@+id/product_title"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/gv_img_1"
+        android:layout_below="@id/product_image"
         android:text="@string/ao_thun_1"
         android:textAlignment="center"
         android:textAppearance="@style/ao_thun"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="15dp"
         android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/gv_gia_ao"
+        android:id="@+id/product_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/gv_ten_sp"
-        android:layout_marginLeft="15dp"
+        android:layout_below="@id/product_title"
         android:text="@string/gia_ao_thun_ban_dau"
         android:textAppearance="@style/gia_sale"
         android:layout_marginTop="10dp"
-        />
-
-
-    <ImageView
-        android:id="@+id/gv_img_star"
-        android:layout_width="15dp"
-        android:layout_height="18dp"
-        android:layout_below="@id/gv_gia_ao"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/baseline_star_24"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
         />
 
     <TextView
-        android:id="@+id/gv_so_sao"
+        android:id="@+id/product_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/gv_gia_ao"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="30dp"
+        android:layout_below="@id/product_price"
         android:text="@string/some_id"
-        android:textAppearance="@style/some_id"/>
+        android:textAppearance="@style/some_id"
+        android:drawableLeft="@drawable/baseline_star_24"
+        />
 
     <TextView
-        android:id="@+id/gv_reviews"
+        android:id="@+id/product_review"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/gv_gia_ao"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="90dp"
+        android:layout_below="@+id/product_price"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
         android:text="@string/reviews"
-        android:textAppearance="@style/some_id"/>
+        android:textAppearance="@style/some_id" />
 
 </RelativeLayout>
