@@ -1,16 +1,154 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="Fragments.OrderFragment"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context="Fragments.OrderFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/order_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Login"
-        />
+    <ImageView
 
-</FrameLayout>
+        android:id="@+id/blank"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        app:layout_constraintBottom_toTopOf="@id/twoItem"
+        app:layout_constraintHorizontal_bias=".75"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/twoItem"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/blank">
+        <ImageView
+            android:id="@+id/shopIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/shop"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintRight_toRightOf="parent" />
+        <ImageView
+            android:id="@+id/undoItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/undo"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintRight_toLeftOf="@id/shopIcon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="500px"
+        android:src="@drawable/ao_thun"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/twoItem" />
+    />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nameCostStar"
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        app:layout_constraintTop_toBottomOf="@id/img"
+        tools:layout_editor_absoluteX="28dp">
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="600px"
+            android:layout_height="100px"
+            android:text="Ao Thun"
+            android:textAlignment="textStart"
+            android:textAppearance="15dp"
+            android:textSize="70px"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="600px"
+            android:layout_height="100px"
+            android:text="Rp 1500000"
+            android:textColor="#D11212"
+            android:textSize="70px"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/product_name" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/starViewSold"
+            android:layout_width="600px"
+            android:layout_height="50px"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cost">
+            <ImageView
+                android:id="@+id/star"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_star_24"
+                app:layout_constraintLeft_toLeftOf="parent" />
+            <TextView
+                android:id="@+id/soLuongStar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="4.8"
+                app:layout_constraintLeft_toRightOf="@id/star" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Da ban: 100"
+                app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/diaChi"
+        android:layout_width="600px"
+        android:layout_height="50px"
+        android:hint="Nhap dia chi"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameCostStar" />
+    <EditText
+        android:id="@+id/coupon"
+        android:layout_width="600px"
+        android:layout_height="50px"
+        android:hint="Ma Giam Gia"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/diaChi" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/soLuongSize"
+        android:layout_width="600px"
+        android:layout_height="50px"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coupon">
+        <Spinner
+            android:id="@+id/spinner_soLuong"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/spinner_size"
+            />
+        <Spinner
+            android:id="@+id/spinner_size"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/spinner_soLuong" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="buy"
+        android:textSize="20px"
+        app:layout_constraintTop_toBottomOf="@id/soLuongSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.70"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
