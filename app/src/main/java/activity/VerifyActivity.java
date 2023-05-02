@@ -10,7 +10,7 @@ import android.widget.Button;
 
 import com.example.tmtshop.R;
 
-public class VerifiActivity extends AppCompatActivity {
+public class VerifyActivity extends AppCompatActivity {
 
     Button button;
 
@@ -18,14 +18,14 @@ public class VerifiActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_verifi);
+        setContentView(R.layout.activity_verify);
 
         button = findViewById(R.id.verifi_btn_tt);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(VerifiActivity.this, AccountActivity.class);
+                Intent intent = new Intent(VerifyActivity.this, AccountActivity.class);
                 startActivity(intent);
             }
         });
