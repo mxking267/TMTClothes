@@ -60,11 +60,12 @@
             android:layout_height="100px"
             android:text="Ao Thun"
             android:textAlignment="textStart"
-            android:textAppearance="15dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textSize="70px"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/black"/>
         <TextView
             android:id="@+id/cost"
             android:layout_width="600px"
@@ -94,12 +95,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="4.8"
-                app:layout_constraintLeft_toRightOf="@id/star" />
+                app:layout_constraintLeft_toRightOf="@id/star"
+                android:textColor="@color/black"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Da ban: 100"
-                app:layout_constraintRight_toRightOf="parent" />
+                app:layout_constraintRight_toRightOf="parent"
+                android:textColor="@color/black"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <EditText

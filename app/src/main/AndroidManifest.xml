@@ -12,16 +12,16 @@
         android:theme="@style/Theme.TMTShop"
         tools:targetApi="31">
         <activity
-            android:name=".AccountActivity"
+            android:name="activity.AccountActivity"
             android:exported="false" />
         <activity
-            android:name=".VerifiActivity"
+            android:name="activity.VerifyActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name="activity.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="activity.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
