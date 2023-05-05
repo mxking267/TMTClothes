@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:padding="30dp"
     tools:context="Fragments.OrderFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -16,7 +17,7 @@
 
         <ImageView
             android:id="@+id/back"
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:layout_height="50dp"
             android:src="@drawable/backitem" />
 
@@ -34,7 +35,7 @@
 
         <ImageView
             android:id="@+id/share_btn"
-            android:layout_width="50dp"
+            android:layout_width="45dp"
             android:layout_height="50dp"
             android:layout_toLeftOf="@id/shop_btn"
             android:src="@drawable/undo" />
@@ -58,13 +59,13 @@
     <RelativeLayout
         android:id="@+id/address"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/image">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:text="Vui long nhap dia chi:"
             android:textAlignment="viewStart"
             android:textSize="25dp" />
@@ -80,10 +81,13 @@
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:orientation="horizontal"
+        app:layout_constraintVertical_bias="0.225"
         app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/buy_btn"
-        app:layout_constraintTop_toBottomOf="@id/address">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address"
+        app:layout_constraintBottom_toTopOf="@id/radio_thanhtien"
+        >
 
         <Button
             android:id="@+id/dauTru"
@@ -111,16 +115,57 @@
             android:text="+"
             android:textColor="@color/black" />
     </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/coupon"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/soLuong">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Vui long nhap ma giam gia(neu co):"
+            android:textAlignment="viewStart"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/coupon_editText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <RelativeLayout
+        app:layout_constraintTop_toBottomOf="@id/coupon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/radio_thanhtien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/radio_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            />
+        <TextView
+            android:textAlignment="center"
+            android:text="Tong cong: $$$$$$$"
+            android:layout_toRightOf="@id/radio_btn"
+            android:id="@+id/thanhTien"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            />
+
+    </RelativeLayout>
+
 
     <Button
+        app:layout_constraintTop_toBottomOf="@id/radio_thanhtien"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
         android:id="@+id/buy_btn"
         android:layout_width="75dp"
         android:layout_height="50dp"
-        android:text="buy"
-        app:layout_constraintTop_toBottomOf="@id/address"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/soLuong"
-        app:layout_constraintVertical_bias="0"
-
-        app:layout_constraintRight_toRightOf="parent" />
+        android:text="buy" />
 </androidx.constraintlayout.widget.ConstraintLayout>
