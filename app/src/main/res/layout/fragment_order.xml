@@ -7,151 +7,120 @@
     tools:context="Fragments.OrderFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <ImageView
-
-        android:id="@+id/blank"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/titlePage"
         android:layout_width="match_parent"
-        android:layout_height="100px"
-        app:layout_constraintBottom_toTopOf="@id/twoItem"
-        app:layout_constraintHorizontal_bias=".75"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/twoItem"
-        android:layout_width="match_parent"
-        android:layout_height="100px"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/blank">
-        <ImageView
-            android:id="@+id/shopIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/shop"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintRight_toRightOf="parent" />
-        <ImageView
-            android:id="@+id/undoItem"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/undo"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintRight_toLeftOf="@id/shopIcon" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <ImageView
-        android:id="@+id/img"
-        android:layout_width="match_parent"
-        android:layout_height="500px"
-        android:src="@drawable/ao_thun"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/twoItem" />
-    />
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/nameCostStar"
-        android:layout_width="match_parent"
-        android:layout_height="300px"
-        app:layout_constraintTop_toBottomOf="@id/img"
-        tools:layout_editor_absoluteX="28dp">
-        <TextView
-            android:id="@+id/product_name"
-            android:layout_width="600px"
-            android:layout_height="100px"
-            android:text="Ao Thun"
-            android:textAlignment="textStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textSize="70px"
-            android:textStyle="bold"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:textColor="@color/black"/>
-        <TextView
-            android:id="@+id/cost"
-            android:layout_width="600px"
-            android:layout_height="100px"
-            android:text="Rp 1500000"
-            android:textColor="#D11212"
-            android:textSize="70px"
-            android:textStyle="bold"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/product_name" />
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/starViewSold"
-            android:layout_width="600px"
-            android:layout_height="50px"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cost">
-            <ImageView
-                android:id="@+id/star"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/baseline_star_24"
-                app:layout_constraintLeft_toLeftOf="parent" />
-            <TextView
-                android:id="@+id/soLuongStar"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="4.8"
-                app:layout_constraintLeft_toRightOf="@id/star"
-                android:textColor="@color/black"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Da ban: 100"
-                app:layout_constraintRight_toRightOf="parent"
-                android:textColor="@color/black"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <EditText
-        android:id="@+id/diaChi"
-        android:layout_width="600px"
-        android:layout_height="50px"
-        android:hint="Nhap dia chi"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nameCostStar" />
-    <EditText
-        android:id="@+id/coupon"
-        android:layout_width="600px"
-        android:layout_height="50px"
-        android:hint="Ma Giam Gia"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/diaChi" />
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/soLuongSize"
-        android:layout_width="600px"
-        android:layout_height="50px"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/coupon">
-        <Spinner
-            android:id="@+id/spinner_soLuong"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/spinner_size"
-            />
-        <Spinner
-            android:id="@+id/spinner_size"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/spinner_soLuong" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <Button
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="buy"
-        android:textSize="20px"
-        app:layout_constraintTop_toBottomOf="@id/soLuongSize"
+        android:gravity="top">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/backitem" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toLeftOf="@id/share_btn"
+            android:layout_toRightOf="@+id/back"
+            android:text="Detail product"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/share_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toLeftOf="@id/shop_btn"
+            android:src="@drawable/undo" />
+
+        <ImageView
+            android:id="@+id/shop_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/shop" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:src="@drawable/ao_khoac"
+        app:layout_constraintBottom_toTopOf="@id/address"
+        app:layout_constraintTop_toBottomOf="@id/titlePage" />
+
+    <RelativeLayout
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/image">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Vui long nhap dia chi:"
+            android:textAlignment="viewStart"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+id/address_editText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/soLuong"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.70"
-        />
+        app:layout_constraintRight_toLeftOf="@id/buy_btn"
+        app:layout_constraintTop_toBottomOf="@id/address">
+
+        <Button
+            android:id="@+id/dauTru"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:backgroundTint="@color/white"
+            android:text="-"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/soLuongMua"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/dauTru"
+            android:text="1"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/dauCong"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/soLuongMua"
+            android:backgroundTint="@color/white"
+            android:text="+"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buy_btn"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="buy"
+        app:layout_constraintTop_toBottomOf="@id/address"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/soLuong"
+        app:layout_constraintVertical_bias="0"
+
+        app:layout_constraintRight_toRightOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
