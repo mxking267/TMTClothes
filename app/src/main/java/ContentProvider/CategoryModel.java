@@ -16,107 +16,29 @@ public class CategoryModel {
     }
 
     public static class Data {
-        private Collection collection;
+        private Collection collections;
 
         public Collection getCollection() {
-            return collection;
+            return collections;
         }
 
         public void setCollection(Collection collection) {
-            this.collection = collection;
+            this.collections = collections;
         }
 
         public static class Collection {
-            private String id;
-            private String handle;
-            private String title;
-            private String description;
-            private Image image;
-            private Products products;
-
-            public String getId() {
-                return id;
-            }
-
-            public void setId(String id) {
-                this.id = id;
-            }
-
-            public String getHandle() {
-                return handle;
-            }
-
-            public void setHandle(String handle) {
-                this.handle = handle;
-            }
-
-            public String getTitle() {
-                return title;
-            }
-
-            public void setTitle(String title) {
-                this.title = title;
-            }
-
-            public String getDescription() {
-                return description;
-            }
-
-            public void setDescription(String description) {
-                this.description = description;
-            }
-
-            public Image getImage() {
-                return image;
-            }
-
-            public void setImage(Image image) {
-                this.image = image;
-            }
-
-            public Products getProducts() {
-                return products;
-            }
-
-            public void setProducts(Products products) {
-                this.products = products;
-            }
-        }
-
-        public static class Image {
-            private String id;
-            private String url;
-
-            public String getId() {
-                return id;
-            }
-
-            public void setId(String id) {
-                this.id = id;
-            }
-
-            public String getUrl() {
-                return url;
-            }
-
-            public void setUrl(String url) {
-                this.url = url;
-            }
-        }
-
-        public static class Products {
-            private List<Edge> edges;
-
-            public List<Edge> getEdges() {
+            public List<Edges> getEdge() {
                 return edges;
             }
 
-            public void setEdges(List<Edge> edges) {
-                this.edges = edges;
+            public void setEdge(List<Edges> edge) {
+                this.edges = edge;
             }
 
-            public static class Edge {
-                private Node node;
+            List<Edges> edges;
+
+            public static class Edges{
+                Node node;
 
                 public Node getNode() {
                     return node;
@@ -125,56 +47,57 @@ public class CategoryModel {
                 public void setNode(Node node) {
                     this.node = node;
                 }
-            }
 
-            public static class Node {
-                private String id;
-                private String title;
-                private FeaturedImage featuredImage;
+                public static class Node{
+                    String id;
+                    String title;
+                    Image image;
 
-                public String getId() {
-                    return id;
-                }
+                    public String getId() {
+                        return id;
+                    }
 
-                public void setId(String id) {
-                    this.id = id;
-                }
+                    public void setId(String id) {
+                        this.id = id;
+                    }
 
-                public String getTitle() {
-                    return title;
-                }
+                    public String getTitle() {
+                        return title;
+                    }
 
-                public void setTitle(String title) {
-                    this.title = title;
-                }
+                    public void setTitle(String title) {
+                        this.title = title;
+                    }
 
-                public FeaturedImage getFeaturedImage() {
-                    return featuredImage;
-                }
+                    public Image getImage() {
+                        return image;
+                    }
 
-                public void setFeaturedImage(FeaturedImage featuredImage) {
-                    this.featuredImage = featuredImage;
-                }
-            }
+                    public void setImage(Image image) {
+                        this.image = image;
+                    }
 
-            public static class FeaturedImage {
-                private String id;
-                private String url;
+                    public static class Image{
+                        String id;
+                        String url;
 
-                public String getId() {
-                    return id;
-                }
 
-                public void setId(String id) {
-                    this.id = id;
-                }
+                        public String getId() {
+                            return id;
+                        }
 
-                public String getUrl() {
-                    return url;
-                }
+                        public void setId(String id) {
+                            this.id = id;
+                        }
 
-                public void setUrl(String url) {
-                    this.url = url;
+                        public String getUrl() {
+                            return url;
+                        }
+
+                        public void setUrl(String url) {
+                            this.url = url;
+                        }
+                    }
                 }
             }
         }

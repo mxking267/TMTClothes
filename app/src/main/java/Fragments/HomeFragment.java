@@ -1,7 +1,5 @@
 package Fragments;
 
-import android.graphics.Bitmap;
-import android.media.Image;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,11 +14,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.GridLayout;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.RelativeLayout;
 
 import com.example.tmtshop.R;
 
@@ -97,46 +90,25 @@ public class HomeFragment extends Fragment {
         slideRecyclerView.setAdapter(imageAdapter);
 
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://mock.shop/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        ApiService apiService = retrofit.create(ApiService.class);
-
-
-        apiService.getCategories().enqueue(new Callback<CategoryModel>() {
-            @Override
-            public void onResponse(Call<CategoryModel> call, Response<CategoryModel> response) {
-                Log.e("onResponse: ","success - 1" );
-                try {
-                    CategoryModel.Data data = response.body().getData();
-                    CategoryModel.Data.Collection collection = data.getCollection();
-                    List<CategoryModel.Data.Products.Edge> products = collection.getProducts().getEdges();
-
-                    for (CategoryModel.Data.Products.Edge product : products) {
-                        String productId = product.getNode().getId();
-                        String productTitle = product.getNode().getTitle();
-                        String featuredImageUrl = product.getNode().getFeaturedImage().getUrl();
-                    }
-                }catch (Exception e){
-                    Log.e( "Exception ", e.toString() );
-                }
-                Log.e("onResponse: ","success - 2" );
-            }
-
-            @Override
-            public void onFailure(Call<CategoryModel> call, Throwable t) {
-                Log.e("onFailure: ","failed");
-            }
-        });
-
-
 
         List<ProductDataModel> productData =  getProductData();
         ProductAdapter adapter = new ProductAdapter(getContext(),productData);
         productRecyclerView.setAdapter(adapter);
 
+        ApiService.apiService.getCategories().enqueue(new Callback<CategoryModel>() {
+            @Override
+            public void onResponse(Call<CategoryModel> call, Response<CategoryModel> response) {
+                CategoryModel categoryModel = response.body();
+                CategoryModel.Data data = categoryModel.getData();
+                CategoryModel.Data.Collection.Edges.Node node = categoryModel.getData().getCollection().getEdge().get(1).getNode();
+                Log.e( "onResponse: ", node.getTitle().toString() );
+            }
+
+            @Override
+            public void onFailure(Call<CategoryModel> call, Throwable t) {
+
+            }
+        });
     }
 
     public int[] getSlideData()
