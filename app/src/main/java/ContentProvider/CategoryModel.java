@@ -1,7 +1,12 @@
 package ContentProvider;
 
+import android.content.Context;
+import android.content.res.AssetManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 public class CategoryModel {
@@ -77,6 +82,8 @@ public class CategoryModel {
                         this.image = image;
                     }
 
+
+
                     public static class Image{
                         String id;
                         String url;
@@ -97,7 +104,9 @@ public class CategoryModel {
                         public void setUrl(String url) {
                             this.url = url;
                         }
+
                     }
+
                 }
             }
         }

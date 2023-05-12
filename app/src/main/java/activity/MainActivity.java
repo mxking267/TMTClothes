@@ -23,6 +23,7 @@ import Fragments.HomeFragment;
 import Fragments.LoginFragment;
 import Fragments.OrderFragment;
 import Fragments.WishListFragment;
+import Network.API;
 
 public class MainActivity extends AppCompatActivity {
     ViewPager viewPager;
@@ -35,17 +36,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Set color status bar
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+/*        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
             window.setStatusBarColor(Color.TRANSPARENT);
             View decor = getWindow().getDecorView();
             decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        }
+        }*/
 
         viewPager = this.findViewById(R.id.main_view_pager);
         adapterView = new MainPagerAdapter(getSupportFragmentManager());
         bottomNavigationView = findViewById(R.id.bottom_nav);
+
+        API api = new API();
+        api.execute();
 
         //ViewPager Fragment
         adapterView.addFragment(new HomeFragment());
