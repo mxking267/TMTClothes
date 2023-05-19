@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/dark_primary"
+    android:padding="30dp"
     tools:context="Fragments.OrderFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -11,414 +12,383 @@
 
     <LinearLayout
         android:id="@+id/title"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
         android:weightSum="10"
-        >
+        app:layout_constraintBottom_toTopOf="@id/product_1"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_weight="1"
-            android:src="@drawable/baseline_arrow_back_ios_24"
             android:id="@+id/back"
             android:layout_width="40dp"
-            android:layout_height="50dp" />
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/baseline_arrow_back_ios_24" />
 
         <TextView
-            android:layout_weight="8"
             android:id="@+id/content"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_toRightOf="@+id/back"
-            android:text="Detail product"
+            android:layout_weight="9"
+            android:text="Order"
             android:textAlignment="center"
-            android:textColor="@color/blue"
+            android:textColor="@color/white"
             android:textSize="30dp"
             android:textStyle="bold" />
-
-<!--        <ImageView-->
-<!--            android:id="@+id/share_btn"-->
-<!--            android:layout_width="45dp"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_toLeftOf="@id/shop_btn"-->
-<!--            android:src="@drawable/undo" />-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/shop_btn"-->
-<!--            android:layout_width="50dp"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_alignParentRight="true"-->
-<!--            android:src="@mipmap/shop" />-->
     </LinearLayout>
-
-
-
+    <!--begin san pham thu nhat-->
     <LinearLayout
+
         android:id="@+id/product_1"
         android:layout_width="match_parent"
-        android:layout_height="300px"
-        android:layout_marginTop="100px"
+        android:layout_height="100dp"
         android:orientation="horizontal"
-        android:paddingTop="20px"
-        app:layout_constraintTop_toBottomOf="@id/title">
+        app:layout_constraintBottom_toTopOf="@id/product_2"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintVertical_bias="0.225">
+
 
         <ImageView
-
-            android:layout_width="300px"
-            android:layout_height="match_parent"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
             android:src="@drawable/ao_khoac" />
 
         <LinearLayout
 
-            android:layout_width="500px"
+            android:layout_width="110dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40px"
+                android:layout_height="80px"
                 android:text="Ao Thun"
                 android:textAlignment="center"
-                android:textSize="20px"
-
+                android:textSize="60px"
+                android:textColor="@color/gray_primary"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40px"
+                android:layout_height="60px"
                 android:text="size:36-color:Brown"
                 android:textAlignment="viewStart"
-                android:textSize="18px"
+                android:textColor="@color/gray_primary"
+
+                android:textSize="28px"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40px"
+                android:layout_height="50px"
                 android:text="$:55"
-                android:textSize="20px" />
+                android:textColor="@color/gray_primary"
+
+                android:textSize="32px" />
         </LinearLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/left_btn"
-                android:layout_width="40px"
-                android:layout_height="40px"
-                android:text="_"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias=""
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="text"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:id="@+id/minus_btn"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
 
-            <TextView
+            <EditText
                 android:id="@+id/text"
-                android:layout_width="50px"
-                android:layout_height="50px"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:textColor="@color/gray_primary"
                 android:text="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/left_btn"
-                app:layout_constraintRight_toLeftOf="@id/right_btn"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textAlignment="center" />
 
             <Button
-                android:id="@+id/right_btn"
-                android:layout_width="40px"
-                android:layout_height="40px"
-                android:layout_marginTop="130px"
+
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
                 android:text="+"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/text"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+        </LinearLayout>
     </LinearLayout>
+
+    <!--end san pham thu nhat-->
+    <!--      begin  san pham thu hai-->
 
     <LinearLayout
         android:id="@+id/product_2"
         android:layout_width="match_parent"
-        android:layout_height="300px"
-        android:paddingTop="20px"
-        app:layout_constraintTop_toBottomOf="@id/product_1">
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/product_3"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_1"
+        app:layout_constraintVertical_bias="0.225">
+
 
         <ImageView
 
-            android:layout_width="300px"
-            android:layout_height="match_parent"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
             android:src="@drawable/ao_khoac" />
 
         <LinearLayout
-
-            android:layout_width="500px"
+            android:layout_width="110dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40px"
+                android:textColor="@color/gray_primary"
+                android:layout_height="80px"
                 android:text="Ao Thun"
                 android:textAlignment="center"
-                android:textSize="20px"
-
+                android:textSize="60px"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40px"
+                android:layout_height="60px"
+                android:textColor="@color/gray_primary"
                 android:text="size:36-color:Brown"
                 android:textAlignment="viewStart"
-                android:textSize="18px"
+                android:textSize="28px"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40px"
+                android:layout_height="50px"
+                android:textColor="@color/gray_primary"
                 android:text="$:55"
-                android:textSize="20px" />
+                android:textSize="32px" />
         </LinearLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/left_btn"
-                android:layout_width="40px"
-                android:layout_height="40px"
-                android:text="_"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias=""
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="text"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:id="@+id/minus_btn2"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
 
-            <TextView
-                android:id="@+id/text"
-                android:layout_width="50px"
-                android:layout_height="50px"
+            <EditText
+                android:id="@+id/text2"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:textColor="@color/gray_primary"
                 android:text="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/left_btn"
-                app:layout_constraintRight_toLeftOf="@id/right_btn"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textAlignment="center" />
 
             <Button
-                android:id="@+id/right_btn"
-                android:layout_width="40px"
-                android:layout_height="40px"
-                android:layout_marginTop="130px"
-                android:text="+"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/text"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
 
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <!--       end san pham thu hai -->
+
+
+    <!--        begin san pham thu ba-->
     <LinearLayout
         android:id="@+id/product_3"
         android:layout_width="match_parent"
-        android:layout_height="300px"
-        android:paddingTop="20px"
-        app:layout_constraintTop_toBottomOf="@id/product_2">
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_2"
+        app:layout_constraintVertical_bias="0.225">
+
 
         <ImageView
 
-            android:layout_width="300px"
-            android:layout_height="match_parent"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
             android:src="@drawable/ao_khoac" />
 
         <LinearLayout
-
-            android:layout_width="500px"
+            android:layout_width="110dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40px"
+                android:layout_height="80px"
+                android:textColor="@color/gray_primary"
                 android:text="Ao Thun"
                 android:textAlignment="center"
-                android:textSize="20px"
-
+                android:textSize="60px"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40px"
+                android:layout_height="60px"
+                android:textColor="@color/gray_primary"
                 android:text="size:36-color:Brown"
                 android:textAlignment="viewStart"
-                android:textSize="18px"
+                android:textSize="28px"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40px"
+                android:layout_height="50px"
+                android:textColor="@color/gray_primary"
                 android:text="$:55"
-                android:textSize="20px" />
+                android:textSize="32px" />
         </LinearLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/left_btn"
-                android:layout_width="40px"
-                android:layout_height="40px"
-                android:text="_"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias=""
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="text"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:id="@+id/minus_btn3"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
 
-            <TextView
-                android:id="@+id/text"
-                android:layout_width="50px"
-                android:layout_height="50px"
+            <EditText
+                android:id="@+id/text3"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
                 android:text="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/left_btn"
-                app:layout_constraintRight_toLeftOf="@id/right_btn"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textColor="@color/gray_primary"
+                android:textAlignment="center" />
 
             <Button
-                android:id="@+id/right_btn"
-                android:layout_width="40px"
-                android:layout_height="40px"
-                android:layout_marginTop="130px"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+
+                android:background="@color/transparent"
                 android:text="+"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/text"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+        </LinearLayout>
+
     </LinearLayout>
 
+    <!--        end san pham thu ba-->
+
+
+    <!--    bottom nav-->
     <LinearLayout
-        android:id="@+id/product_4"
         android:layout_width="match_parent"
-        android:layout_height="300px"
-        android:paddingTop="20px"
-        app:layout_constraintTop_toBottomOf="@id/product_3">
-
-        <ImageView
-
-            android:layout_width="300px"
-            android:layout_height="match_parent"
-            android:src="@drawable/ao_khoac" />
-
-        <LinearLayout
-
-            android:layout_width="500px"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40px"
-                android:text="Ao Thun"
-                android:textAlignment="center"
-                android:textSize="20px"
-
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40px"
-                android:text="size:36-color:Brown"
-                android:textAlignment="viewStart"
-                android:textSize="18px"
-                android:textStyle="normal" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40px"
-                android:text="$:55"
-                android:textSize="20px" />
-        </LinearLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/left_btn"
-                android:layout_width="40px"
-                android:layout_height="40px"
-                android:text="_"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias=""
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="text"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/text"
-                android:layout_width="50px"
-                android:layout_height="50px"
-                android:text="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/left_btn"
-                app:layout_constraintRight_toLeftOf="@id/right_btn"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/right_btn"
-                android:layout_width="40px"
-                android:layout_height="40px"
-                android:layout_marginTop="130px"
-                android:text="+"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/text"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="400px"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent">
 
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="400px"
-            android:orientation="vertical">
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="100px"
-                android:text="subtotal" />
+                android:layout_width="50dp"
+                android:textColor="@color/gray_primary"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Thanh tien:" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="100px"
-                android:text="delivery" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="100px"
-                android:text="total" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="100px"
-                android:text="Check out" />
+                android:layout_width="wrap_content"
+                android:textColor="@color/gray_primary"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="55555$"
+                android:textAlignment="viewEnd"
+                 />
         </LinearLayout>
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <TextView
+                android:layout_weight="1"
+                android:textColor="@color/gray_primary"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="Phi ship"/>
+            <TextView
+                android:text="55555$"
+                android:textAlignment="viewEnd"
+                android:layout_width="50dp"
+                android:textColor="@color/gray_primary"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <TextView
+                android:textColor="@color/gray_primary"
+                android:layout_weight="1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="Tong cong"/>
+            <TextView
+                android:text="55555$"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/gray_primary"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></TextView>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Mua"/>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

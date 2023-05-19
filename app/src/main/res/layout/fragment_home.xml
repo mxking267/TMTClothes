@@ -1,52 +1,132 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="Fragments.HomeFragment"
-    android:background="@color/white"
-    android:padding="20dp"
+
+    android:layout_marginTop="50dp"
     android:orientation="vertical"
-    >
+    tools:context="Fragments.HomeFragment"
+    android:layout_marginBottom="125dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <EditText
-        android:id="@+id/home_search_input"
-        android:layout_width="325dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/shadow"
-        android:hint="Search"
-        android:drawableRight="@drawable/baseline_search_24"
-        android:textColorHint="@color/gray_half"
-        android:padding="10dp"
-        />
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="25dp"
-            android:id="@+id/home_slider"
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:background="@color/dark_primary">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            />
-
-        <TextView
-            android:textColor="@color/gray_half"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Feature Product"
-            android:textStyle="bold"
-            android:textSize="25dp"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/home_recycler_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"/>
+            android:orientation="vertical">
 
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="-35dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_categories"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/home_line_left"
+                app:layout_constraintRight_toLeftOf="@id/home_line_right"
+                app:layout_constraintTop_toBottomOf="@id/home_slider" />
+
+            <TextView
+                android:id="@+id/home_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Product"
+                android:textColor="@color/gray_primary"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/home_line_left"
+                app:layout_constraintRight_toLeftOf="@id/home_line_right"
+                app:layout_constraintTop_toBottomOf="@+id/home_categories" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_product_recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toRightOf="@id/home_line_left"
+                app:layout_constraintRight_toLeftOf="@id/home_line_right"
+                app:layout_constraintTop_toBottomOf="@id/home_title" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/home_line_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/home_line_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_secondary"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:weightSum="1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+
+        >
+
+        <EditText
+            android:id="@+id/home_search_input"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.9"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/gray_secondary"
+            android:drawableRight="@drawable/baseline_search_24"
+            android:drawableTint="@color/gray_primary"
+            android:hint="Search"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginRight="10dp"
+            android:textColorHint="@color/gray_primary" />
+
+        <Button
+            android:id="@+id/home_cart_icon"
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.05"
+            android:background="@drawable/cart_svgrepo_com"
+            android:backgroundTint="@color/gray_primary" />
+
+        <Button
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.05"
+            android:background="@drawable/bell_2_svgrepo_com"
+            android:backgroundTint="@color/gray_primary" />
+    </LinearLayout>
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
