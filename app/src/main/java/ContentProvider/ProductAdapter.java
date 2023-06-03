@@ -37,7 +37,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
 
         holder.img.setImageBitmap(products.get(position).image);
         holder.title.setText(products.get(position).title);
-        holder.price.setText(String.valueOf(products.get(position).price));
+        holder.price.setText(String.valueOf(products.get(position).price + " VND"));
         holder.rating.setText(String.valueOf(products.get(position).rating));
         holder.reviews.setText(String.valueOf(products.get(position).reviews) + " Reviews");
     }

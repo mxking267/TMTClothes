@@ -1,0 +1,68 @@
+[33mcommit d471b012deb521aa42a5532f6ad84c625bb5c7c4[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: TanDaxua <mxking267@gmail.com>
+Date:   Tue May 2 20:23:39 2023 +0700
+
+    fix loi
+
+[33mcommit 3f6b02559abcf6b37a33866cf21a9acbb3f2aacb[m
+Author: Thạch Bùi Ngọc <2001216134@hufi.edu.vn>
+Date:   Mon May 1 10:05:11 2023 +0700
+
+    //order
+
+[33mcommit dc5c27c16c4935438b86cf08c0dc614f89571978[m
+Merge: 268ac85 4bf00d0
+Author: Minh Man <mannpham097@gmail.com>
+Date:   Fri Apr 28 18:08:46 2023 +0700
+
+    login
+
+[33mcommit 268ac85cbbbe0d7cb627499fd65195ef2c61b8f6[m
+Author: Minh Man <mannpham097@gmail.com>
+Date:   Fri Apr 28 18:03:09 2023 +0700
+
+    login
+
+[33mcommit 4bf00d0a59d78dc78480014c3436dd2bd59844bd[m
+Author: TanDaxua <mxking267@gmail.com>
+Date:   Wed Apr 26 02:50:44 2023 +0700
+
+    slider
+
+[33mcommit d764fb1191158912a467c9cef39e058b050d6bc0[m
+Merge: 8130258 4bb5dbd
+Author: TanDaxua <mxking267@gmail.com>
+Date:   Sat Apr 22 21:34:16 2023 +0700
+
+    view pager + product recycler view
+
+[33mcommit 8130258d8435dfda3b513cce5f22ee9292357e99[m
+Author: TanDaxua <mxking267@gmail.com>
+Date:   Sat Apr 22 15:53:55 2023 +0700
+
+    Tan pro
+
+[33mcommit 4bb5dbdef01d2e1dc08687410ae5f43a49b31aa5[m
+Merge: 93c6cc2 5c3ad84
+Author: Thạch Bùi Ngọc <2001216134@hufi.edu.vn>
+Date:   Sat Apr 22 11:33:12 2023 +0700
+
+    Merge branch 'main' of https://github.com/mxking267/TMTClothes
+
+[33mcommit 93c6cc20497821ba31416235832cc5bdda99d011[m
+Author: Thạch Bùi Ngọc <2001216134@hufi.edu.vn>
+Date:   Sat Apr 22 11:32:56 2023 +0700
+
+    push
+
+[33mcommit 5c3ad84d22e3fedcdad38cbe5481538f88d2d33d[m
+Author: Minh Man <mannpham097@gmail.com>
+Date:   Sat Apr 22 10:49:22 2023 +0700
+
+    shop
+
+[33mcommit 7b4a532aced7f7e1db02afc4a38d383c3cbde112[m
+Author: TanDaxua <mxking267@gmail.com>
+Date:   Sun Apr 16 08:46:57 2023 +0700
+
+    first commit

@@ -8,8 +8,7 @@
     <ImageView
         android:id="@+id/back"
         android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/backitem"/>
+        android:layout_height="50dp" />
 
     <TextView
         android:textStyle="bold"

@@ -1,6 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/dark_primary"
     android:layout_height="match_parent"
     tools:context="Fragments.LoginFragment">
 
@@ -36,6 +37,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="290dp"
         android:layout_marginLeft="25dp"
+        android:paddingTop="5dp"
         android:textColorHint="@color/gray_600"
         android:background="@drawable/frame_edt"
         android:hint="Nhập địa chỉ email/số điện thoại của bạn"/>

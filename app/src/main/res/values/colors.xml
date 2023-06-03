@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="color_primary">#f0b90b</color>
+    <color name="color_secondary">#3c2601</color>
+    <color name="dark_primary">#0b0e11</color>
+    <color name="dark_secondary">#181a20</color>
     <color name="purple_200">#3669C9</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -9,8 +13,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#3669C9</color>
     <color name="gray_half">#838589</color>
+    <color name="gray_primary">#474d57</color>
+    <color name="gray_secondary">#2b3139</color>
     <color name="light_blue_400">#FF29B6F6</color>
     <color name="light_blue_600">#FF039BE5</color>
     <color name="gray_400">#FFBDBDBD</color>
     <color name="gray_600">#FF757575</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>
