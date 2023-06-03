@@ -8,10 +8,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.tmtshop.R;
 
+import activity.ProfileActivity;
 import activity.RegisterActivity;
 
 /**
@@ -70,10 +72,19 @@ public class LoginFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
         TextView textView = view.findViewById(R.id.login_dk);
+        Button button = view.findViewById(R.id.login_btn_dangnhap);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(),RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),ProfileActivity.class);
                 startActivity(intent);
             }
         });

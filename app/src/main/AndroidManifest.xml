@@ -12,19 +12,20 @@
         android:theme="@style/Theme.TMTShop"
         tools:targetApi="31">
         <activity
-            android:name=".ProfileActivity"
+            android:name="activity.ProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+        <activity
+            android:name="activity.AccountActivity"
             android:exported="false" />
         <activity
-            android:name=".AccountActivity"
+            android:name="activity.VerifyActivity"
             android:exported="false" />
         <activity
-            android:name=".VerifyActivity"
+            android:name="activity.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name="activity.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
