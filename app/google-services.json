@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "310413111520",
+    "project_id": "tmt-clothes",
+    "storage_bucket": "tmt-clothes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310413111520:android:c20a2f77f7719048baa085",
+        "android_client_info": {
+          "package_name": "com.example.tmtshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310413111520-clg3697gn979okqmmkgb5nlpdajermbu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIMUgHWrxlC3g5ZXGJKdq_95j3Di_bGT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310413111520-clg3697gn979okqmmkgb5nlpdajermbu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310413111520:android:fb922bf00b3540aabaa085",
+        "android_client_info": {
+          "package_name": "com.example.tmtshop.R"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310413111520-clg3697gn979okqmmkgb5nlpdajermbu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIMUgHWrxlC3g5ZXGJKdq_95j3Di_bGT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310413111520-clg3697gn979okqmmkgb5nlpdajermbu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

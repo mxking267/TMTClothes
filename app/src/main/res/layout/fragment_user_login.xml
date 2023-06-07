@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="uservm"
+            type="ViewModel.UserViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/dark_primary">
+
+        <RelativeLayout
+            android:id="@+id/user_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/user_image"
+                android:src="@{uservm.userModel.imageURL != null ? uservm.userModel.imageURL : @drawable/unlogin_image}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/gray_primary"
+                android:layout_marginRight="20dp" />
+
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_toEndOf="@+id/user_image"
+                android:layout_below="@id/user_image"
+                android:textColor="@color/white"
+                android:text="@{uservm.userModel.name}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/user_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginRight="20dp"
+                android:tint="@color/gray_primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/half_circle_svgrepo_com" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Đổi màu nền"
+                android:textColor="@color/gray_primary"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Switch
+                android:switchMinWidth="50dp"
+                android:switchPadding="16dp"
+                android:thumbTint="@color/yellow"
+                android:trackTint="@color/gray_primary"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_change_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_sign_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/sign_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tint="@color/gray_primary"
+                android:layout_marginRight="20dp" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:textSize="30dp"
+                android:textColor="@color/gray_primary"
+                android:textStyle="bold"
+                android:text="Sign out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -7,7 +7,7 @@
     android:background="@color/dark_primary"
     android:orientation="vertical"
     android:padding="30dp"
-    tools:context="activity.DetailsActivity">
+    tools:context="View.DetailsActivity">
 
     <LinearLayout
         android:id="@+id/title"

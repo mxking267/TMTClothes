@@ -1,75 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="activity.AccountActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="25dp"
-        android:text="Tài khoản và mật khẩu"
-        android:textStyle="bold"
-        android:textSize="35dp"
-        android:textColor="@color/black"/>
+    <data>
+    <variable
+        name="vm"
+        type="ViewModel.UserLoginViewModel" />
+    </data>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="170dp"
-        android:layout_marginLeft="25dp"
-        android:textSize="17sp"
-        android:text="Hoàn thành các dữ liệu sau để sử dụng \nTMT Shop"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_primary"
+        tools:context="View.LoginActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
-        android:layout_marginLeft="25dp"
-        android:textSize="20dp"
-        android:text="Họ tên"
-        android:textColor="@color/black"/>
+        <TextView
 
-    <EditText
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="280dp"
-        android:layout_marginLeft="25dp"
-        android:textColorHint="@color/gray_600"
-        android:background="@drawable/frame_edt"
-        android:hint="Nhập họ tên"/>
+            android:id="@+id/login_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="Welcome back to \nTMT Shop"
+            android:textColor="@color/gray_primary"
+            android:textSize="35dp"
+            android:backgroundTint="@color/gray_primary"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@id/login_line_left"
+            app:layout_constraintRight_toLeftOf="@id/login_line_right"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="360dp"
-        android:layout_marginLeft="25dp"
-        android:textSize="20dp"
-        android:text="Password"
-        android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/login_account_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Email/Phone"
+            android:textColor="@color/gray_primary"
+            android:textSize="20dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@id/login_line_left"
+            app:layout_constraintRight_toLeftOf="@id/login_line_right"
+            app:layout_constraintTop_toBottomOf="@id/login_title" />
 
-    <EditText
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginLeft="25dp"
-        android:textColorHint="@color/gray_600"
-        android:background="@drawable/frame_edt"
-        android:inputType="textPassword"
-        android:hint="Nhập mật khẩu"/>
+        <EditText
+            android:id="@+id/email_signIn_edt"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/frame_edt"
+            android:hint="Email/ Số điện thoại"
+            android:text="@={vm.account}"
+            android:padding="10dp"
+            android:textColorHint="@color/gray_600"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@id/login_line_left"
+            app:layout_constraintRight_toLeftOf="@id/login_line_right"
+            app:layout_constraintTop_toBottomOf="@id/login_account_title" />
 
-    <Button
-        android:id="@+id/account_btn_xn"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="550dp"
-        android:layout_marginLeft="30dp"
-        android:text="Xác nhận"
-        android:textColor="@color/white"
-        android:textSize="18dp"
-        android:background="@drawable/login_button"/>
+        <TextView
+            android:id="@+id/login_password_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/gray_primary"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintHorizontal_bias="0.273"
+            app:layout_constraintLeft_toRightOf="@id/login_line_left"
+            app:layout_constraintRight_toLeftOf="@id/login_line_right"
+            app:layout_constraintTop_toBottomOf="@+id/email_signIn_edt" />
 
-</RelativeLayout>
+        <EditText
+            android:id="@+id/password_signIn_edt"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/frame_edt"
+            android:hint="Nhập mật khẩu"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:text="@={vm.password}"
+            android:textColorHint="@color/gray_600"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@id/login_line_left"
+            app:layout_constraintRight_toLeftOf="@id/login_line_right"
+            app:layout_constraintTop_toBottomOf="@+id/login_password_title" />
+
+        <Button
+            android:id="@+id/account_signIn_btn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@drawable/login_button"
+            android:text="Đăng Nhập"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:onClick="OnSubmitClick"
+            android:backgroundTint="@color/gray_primary"
+            android:layout_marginTop="30dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toRightOf="@id/login_line_left"
+            app:layout_constraintRight_toLeftOf="@id/login_line_right"
+            app:layout_constraintTop_toBottomOf="@+id/password_signIn_edt" />
+
+        <Button
+            android:background="@color/transparent"
+            android:id="@+id/login_register_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:text="Đăng ký"
+            android:textColor="@color/gray_primary"
+            android:textSize="20dp"
+            android:onClick="OnRegisterClick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toRightOf="@id/login_line_left"
+            app:layout_constraintRight_toLeftOf="@id/login_line_right" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/login_line_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/login_line_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
