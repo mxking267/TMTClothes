@@ -1,76 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="activity.RegisterActivity">
+    tools:context="View.RegisterActivity"
+    android:background="@color/dark_primary">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:layout_marginLeft="25dp"
         android:text="Đăng ký tài khoản"
-        android:textStyle="bold"
+        android:textColor="@color/gray_primary"
         android:textSize="35dp"
-        android:textColor="@color/black"/>
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/login_line_right"
+        app:layout_constraintStart_toStartOf="@+id/login_line_left"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/email_title"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="170dp"
-        android:layout_marginLeft="25dp"
-        android:textSize="17sp"
-        android:text="Nhập Email/Số điện thoại để đăng ký"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
-        android:layout_marginLeft="25dp"
-        android:textSize="20dp"
         android:text="Email/Phone"
-        android:textColor="@color/black"/>
+        android:textColor="@color/gray_primary"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/login_line_right"
+        app:layout_constraintStart_toStartOf="@+id/login_line_left"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
-        android:layout_width="330dp"
+        android:id="@+id/emailEdt"
+        android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="270dp"
-        android:layout_marginLeft="25dp"
-        android:textColorHint="@color/gray_600"
         android:background="@drawable/frame_edt"
-        android:hint="Nhập địa chỉ email/số điện thoại của bạn"/>
+        android:hint="Email/ Số điện thoại"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/gray_600"
+        app:layout_constraintEnd_toStartOf="@+id/login_line_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/login_line_left"
+        app:layout_constraintTop_toBottomOf="@+id/email_title" />
+
+
+    <TextView
+        android:id="@+id/password_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textColor="@color/gray_primary"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/login_line_right"
+        app:layout_constraintStart_toStartOf="@+id/login_line_left"
+        app:layout_constraintTop_toBottomOf="@+id/emailEdt" />
+
+    <EditText
+        android:id="@+id/password_edt"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/frame_edt"
+        android:hint="Password"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/gray_600"
+        app:layout_constraintEnd_toStartOf="@+id/login_line_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/login_line_left"
+        app:layout_constraintTop_toBottomOf="@+id/password_title" />
+
 
     <Button
         android:id="@+id/register_btn_dk"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="500dp"
-        android:layout_marginLeft="30dp"
+        android:background="@drawable/login_button"
         android:text="Đăng ký"
         android:textColor="@color/white"
         android:textSize="18dp"
-        android:background="@drawable/login_button"/>
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/login_line_right"
+        app:layout_constraintStart_toStartOf="@+id/login_line_left"
+        app:layout_constraintTop_toBottomOf="@+id/password_edt" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="70dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
         android:text="Đã có tài khoản?"
-        android:textSize="20dp"/>
+        android:layout_marginRight="20dp"
+        android:textColor="@color/gray_primary"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/login_line_right"
+        app:layout_constraintStart_toStartOf="@+id/login_line_left"
+        app:layout_constraintTop_toBottomOf="@+id/register_btn_dk" />
 
     <TextView
         android:id="@+id/register_tv_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập"
+        android:textAlignment="center"
+        android:textColor="#3669C9"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/login_line_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_line_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="230dp"
-        android:layout_marginBottom="30dp"
-        android:text="Đăng nhập"
-        android:textSize="20dp"
-        android:textColor="#3669C9"/>
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
 
-</RelativeLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_line_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
